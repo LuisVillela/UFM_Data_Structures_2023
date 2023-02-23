@@ -47,3 +47,28 @@ class CircularQueue:
 
         self.elements[self.rear] = value
         self.count += 1
+
+    def dequeue(self) -> str:
+        '''
+        Deletes element from the queue.
+
+        Args:
+            None
+
+        Returns:
+            value (str): value of element dequeued
+        '''
+
+        if self.count == 0:
+            print('Queue Underflow...')
+            return None
+
+        value = self.elements[self.front]
+        self.elements[self.front] = None # (Optional)
+        if self.front == self.rear:
+            self.front = -1
+            self.rear = -1
+        else:
+            self.front = (self.front + 1) % self.max
+        self.count -= 1
+        return value
