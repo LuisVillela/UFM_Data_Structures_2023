@@ -24,6 +24,8 @@ class CircularQueue:
     def __repr__(self) -> str:
         return 'Current queue: {} | Front: {} | Rear: {}'.format(self.elements, self.front, self.rear)
 
+#ENQUEUE --------------------------------------------------------------------
+
     def enqueue(self, value: str) -> None:
         '''
         Inserts element into the queue.
@@ -47,6 +49,8 @@ class CircularQueue:
 
         self.elements[self.rear] = value
         self.count += 1
+
+#DEQUEUE --------------------------------------------------------------------
 
     def dequeue(self) -> str:
         '''
@@ -73,6 +77,7 @@ class CircularQueue:
         self.count -= 1
         return value
 
+#PEEK --------------------------------------------------------------------
 
     def peek(self) -> str:
         '''
@@ -90,3 +95,5 @@ class CircularQueue:
 
             print(f"Peeking at element: {self.elements[self.front]}")
         return self.elements[self.front]
+
+#SEARCH --------------------------------------------------------------------
