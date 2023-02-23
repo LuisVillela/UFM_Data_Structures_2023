@@ -72,3 +72,21 @@ class CircularQueue:
             self.front = (self.front + 1) % self.max
         self.count -= 1
         return value
+
+
+    def peek(self) -> str:
+        '''
+        Returns the element at the front of the queue without removing it.
+
+        Args:
+            None
+
+        Returns:
+            value (str): value of element at front of queue
+        '''
+        if self.count == 0:
+            print('Queue is empty...')
+            return None
+
+            print(f"Peeking at element: {self.elements[self.front]}")
+        return self.elements[self.front]
