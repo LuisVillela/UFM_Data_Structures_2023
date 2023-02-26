@@ -97,3 +97,23 @@ class CircularQueue:
         return self.elements[self.front]
 
 #SEARCH --------------------------------------------------------------------
+    def search(self, value: str) -> int:
+        '''
+        Searches the queue for the first occurrence of the given value.
+
+        Args:
+            value (str): value to search for
+
+        Returns:
+            index (int): index of first occurrence of value in queue, or -1 if not found
+        '''
+        if self.count == 0:
+            print('Queue is empty...')
+            return -1
+
+        for i in range(self.count):
+            if self.elements[(self.front + i) % self.max] == value:
+                return (self.front + i) % self.max
+
+        print(f'    Search   | {value} not found in queue...')
+        return -1
