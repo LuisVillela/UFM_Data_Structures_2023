@@ -50,3 +50,17 @@ ll.delete('D')
 print(ll)
 ll.delete('C')
 print(ll)
+
+
+#Search implementation ----------------------------------------
+
+# Found Search a given node
+ll.search('G')
+
+# Node not in the list 
+ll.search('C')
+
+#now lets try deleting G, then searching it to see if it works
+ll.delete('G')
+ll.search('G')
+print(ll)
