@@ -184,3 +184,27 @@ class LinkedList:
             previous_node = current_node
 
         print('Reference node {} not found in linked list...'.format(reference_node))
+
+
+#Implementación del Funcion Search ---------------------------------------------------
+
+    def search(self, key):
+        '''
+        Searches for a node in the linked list.
+
+        Args:
+            key (str): value of node to search
+
+        Returns:
+            The node containing the key, or -1 if the node is not found
+        '''
+
+        for node in self:
+            if node.data == key:
+                print(node, "Está en la lista")
+                return 
+
+        print(-1)
+        return 
+        
+        
